@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #050510;
+    overflow: hidden;
+}
+.header{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 70%;
+  }
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.logo{
+    color: white;
+}
+.option{
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    min-width: 500px;
+}
+.option div{
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 35px;
+    width: 60px;
+    padding: 10px;
+    background-color: rgba(255,225,225,0.06);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+    backdrop-filter: blur(20px);
+    transition: 0.5s; */
+}
+.option div a:hover{
+letter-spacing: 3px ;
+cursor: pointer;
+box-shadow: 0 0 5px #ff1f71,0 0 15px #ff1f71,0 0 30px #ff1f71,0 0 60px #ff1f71;
+background:#ff1f71 ;
+}
+ 
+.option div a{
+    color: white;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 35px;
+    width: 60px;
+    padding: 10px;
+    background-color: rgba(255,225,225,0.06);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+    backdrop-filter: blur(20px);
+    transition: 0.5s; 
+}
+.wrapper{
+   /* border: 1px solid #fff;  */
+   width: 40%;
+   min-width: 500px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);  /* ? */
+}
+.container{
+    width: 100%;
+    padding: 50px 30px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    backdrop-filter:blur(30px);  /* this creat blur effect*/
+}
+.container>h2{
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+}
+
+.shape-1{
+    height: 220px;
+    width: 220px;
+    background: linear-gradient(#ff0e72,#ff66a6);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -110%;
+    left: -110%;
+    z-index: -1;
+    animation: ballmove-1 2.5s ease-in-out forwards;
+}
+@keyframes ballmove-1{
+    100%{
+        transform: translate(250%,-120%);
+    }
+}
+
+.shape-2{
+    height: 180px;
+    width: 180px;
+    background: linear-gradient(#3da5e0,#325ea5);
+    border-radius: 50%;
+    position: absolute;
+    top: -105%;
+    right: -105%;
+    z-index: -1;
+    animation: ballmove-2 2.5s ease-in-out forwards;
+}
+@keyframes ballmove-2{
+    100%{
+        transform: translate(-310%,150%);
+    }
+}
+.container *{
+    font-family: "Poppins",sans-serif;
+    color: #fff;
+    font-weight: 500;
+
+}
+.skills:not(:last-child){
+    margin-bottom: 30px; /* not work properly*/
+}
+.details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bar{
+    position: relative;
+    background-color: rgba (255,255,255,0.06);
+    padding: 7px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+.bar div{
+    position: relative;
+    width:0%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #badefc;
+    border: 1px solid #1c97fc;
+    box-shadow: 0 0 5px rgba(28,151,252,0.6) ;
+}
+
+#html-bar{
+    animation: html-fill 2s forwards;
+}
+
+@keyframes html-fill{
+    100%{
+        width: 90%;
+    }
+}
+
+#css-bar{
+    animation: css-fill 2s forwards;
+}
+
+@keyframes css-fill{
+    100%{
+        width: 80%;
+    }
+}
+
+#js-bar{
+    animation: js-fill 2s forwards;
+}
+
+@keyframes js-fill{
+    100%{
+        width: 60%;
+    }
+}
